@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chi tiết sản phẩm - ShoeShop</title>
+    <link rel="stylesheet" href="../css/product-detail.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="header-inner">
+        <a href="index.html" class="logo">SHOESHOP</a>
+        <nav class="nav-links">
+          <a href="#">Nam</a>
+          <a href="#">Nữ</a>
+          <a href="#">Trẻ em</a>
+        </nav>
+        <div class="header-icons">
+          <a href="#" class="icon-btn">
+            <img src="search1.webp" alt="Tìm kiếm" class="header-icon" />
+          </a>
+          <a href="cart.html" class="icon-btn cart-icon">
+            <img src="cart1.jpg" alt="Giỏ hàng" class="header-icon" />
+            <span class="cart-count" id="cart-count">0</span>
+          </a>
+          <a href="#" class="icon-btn">
+            <img src="user1.webp" alt="Tài khoản" class="header-icon" />
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <div class="breadcrumb">
+      <a href="index.html">Trang chủ</a>
+      <span> / </span>
+      <a href="#">Nam</a>
+      <span> / </span>
+      <span>Air Force 1 '07</span>
+    </div>
+
+    <main class="product-detail-container">
+      <div class="product-gallery">
+        <div class="main-image-box">
+          <img
+            src="air_force_1'07.avif"
+            alt="Air Force 1 '07"
+            id="main-image"
+            class="main-image"
+          />
+        </div>
+
+        <div class="thumbnail-list">
+          <img
+            src="1' 07(1).avif"
+            class="thumbnail active"
+            onclick="changeImage(this)"
+            alt=""
+          />
+          <img
+            src="1' 07(2).avif"
+            class="thumbnail"
+            onclick="changeImage(this)"
+            alt=""
+          />
+          <img
+            src="1' 07(3).avif"
+            class="thumbnail"
+            onclick="changeImage(this)"
+            alt=""
+          />
+          <img
+            src="1'07(4).avif"
+            class="thumbnail"
+            onclick="changeImage(this)"
+            alt=""
+          />
+          <img
+            src="1' 07(5).avif"
+            class="thumbnail"
+            onclick="changeImage(this)"
+            alt=""
+          />
+        </div>
+      </div>
+
+      <div class="product-info">
+        <p class="product-brand">Nike</p>
+        <h1 class="product-name">Air Force 1 '07</h1>
+        <p class="product-price">3.519.000 đ</p>
+
+        <p class="product-desc">
+          Biểu tượng của sự tối giản. Lớp da cao cấp, đế Air đệm êm, phong cách
+          vượt thời gian trên mọi nẻo đường.
+        </p>
+
+        <div class="option-group">
+          <p class="option-label">Chọn size</p>
+          <div class="size-list" id="size-list">
+            <button class="size-btn" onclick="selectSize(this)">38</button>
+            <button class="size-btn" onclick="selectSize(this)">39</button>
+            <button class="size-btn" onclick="selectSize(this)">40</button>
+            <button class="size-btn" onclick="selectSize(this)">41</button>
+            <button class="size-btn" onclick="selectSize(this)">42</button>
+            <button class="size-btn" onclick="selectSize(this)">43</button>
+          </div>
+        </div>
+
+        <div class="option-group">
+          <p class="option-label">Số lượng</p>
+          <div class="qty-control">
+            <button class="qty-btn" onclick="changeQty(-1)">-</button>
+            <input
+              class="qty-input"
+              type="number"
+              id="quantity"
+              value="1"
+              min="1"
+              max="99"
+              readonly
+            />
+            <button class="qty-btn" onclick="changeQty(1)">+</button>
+          </div>
+        </div>
+
+        <div class="action-buttons">
+          <button class="btn-primary" onclick="addToCart()">
+            Thêm vào giỏ hàng
+          </button>
+          <button class="btn-outline" onclick="buyNow()">Mua ngay</button>
+        </div>
+        <div class="toast" id="toast"></div>
+      </div>
+    </main>
+
+    <script src="../js/product-detail.js"></script>
+  </body>
+</html>
